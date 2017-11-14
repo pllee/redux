@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Store_1 = require("./Store");
+function createStore(reducer, preloadedState, enhancer) {
+    if (enhancer) {
+        const storeEnhancer = enhancer(createStore);
+        return storeEnhancer(reducer, preloadedState);
+    }
+    return new Store_1.default({ reducer, preloadedState });
+}
+exports.default = createStore;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlYXRlU3RvcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9saWIvY3JlYXRlU3RvcmUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxtQ0FBNEI7QUFFNUIscUJBQW9DLE9BQU8sRUFBRSxjQUFjLEVBQUUsUUFBUTtJQUNqRSxFQUFFLENBQUEsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDO1FBQ1YsTUFBTSxhQUFhLEdBQUcsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDO1FBQzVDLE1BQU0sQ0FBQyxhQUFhLENBQUMsT0FBTyxFQUFFLGNBQWMsQ0FBQyxDQUFDO0lBQ2xELENBQUM7SUFDRCxNQUFNLENBQUMsSUFBSSxlQUFLLENBQUMsRUFBQyxPQUFPLEVBQUUsY0FBYyxFQUFDLENBQUMsQ0FBQztBQUNoRCxDQUFDO0FBTkQsOEJBTUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgU3RvcmUgZnJvbSAnLi9TdG9yZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGNyZWF0ZVN0b3JlKHJlZHVjZXIsIHByZWxvYWRlZFN0YXRlLCBlbmhhbmNlcikge1xuICAgIGlmKGVuaGFuY2VyKSB7XG4gICAgICAgIGNvbnN0IHN0b3JlRW5oYW5jZXIgPSBlbmhhbmNlcihjcmVhdGVTdG9yZSk7XG4gICAgICAgIHJldHVybiBzdG9yZUVuaGFuY2VyKHJlZHVjZXIsIHByZWxvYWRlZFN0YXRlKTtcbiAgICB9XG4gICAgcmV0dXJuIG5ldyBTdG9yZSh7cmVkdWNlciwgcHJlbG9hZGVkU3RhdGV9KTtcbn0gICAgIl19
